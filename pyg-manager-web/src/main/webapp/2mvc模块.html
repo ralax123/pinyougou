@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>义一个模块e</title>
+
+<script src="plugins/angularjs/angular.min.js"></script>
+
+<script type="text/javascript">
+	//定义一个模块
+	var app = angular.module("pyg", []);
+	//模块绑定controller
+	app.controller("hellocontroller", function($scope) {
+		//函数
+		$scope.getting = function() {
+			return "aaaa";
+		}
+
+		$scope.method1 = function() {
+			return "bbb";
+		}
+
+	})
+</script>
+</head>
+<body ng-app="pyg" ng-controller="hellocontroller" ng-init="name='张大海'">
+	<h1>{{getting()}}</h1>
+	<h1>{{method1()}}</h1>
+	<br> 姓名:
+	<input ng-model="name">
+	{{name}}
+
+
+
+
+
+
+</body>
+</html>

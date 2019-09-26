@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script sc="./js/qrious.min.js"></script>
+</head>
+<body>
+	<img id="img1">
+	<script >
+		var qr = new QRious({
+			element : document.getElementById('img1'),
+			size : 250,
+			level : 'H',
+			value : 'http://www.itcast.cn'
+		});
+	</script>
+
+</body>
+</html>

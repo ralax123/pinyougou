@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>义一个模块e</title>
+
+<script src="plugins/angularjs/angular.min.js"></script>
+
+<script type="text/javascript">
+	var app = angular.module("module1", []);
+	app.controller("controller1", function($scope, $http) {
+
+		$scope.findAll = function() {
+			$http.get("data.json").success(function(data) {
+				$scope.list = data;
+				alert("aaa")
+			});
+		}
+	})
+</script>
+</head>
+<body ng-app="module1" ng-controller="controller1" ng-init="findAll();">
+	数据
+
+	<h1 ng-repeat="user in list">{{user.name}}
+		{{user.age}}{{user.address}}</h1>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+	//定义函数
+	function hello($scope) {
+		$scope.content = {
+			name : "张三",
+			age : "23",
+			address : "上海"
+		}
+	}
+	function hello2($scope){
+		$scope.content="aaaaaaaaaaaaaa";
+	}
+</script>
+</head>
+<body ng-app>
+
+
+	<br />
+	x<input ng-model="x"> +
+	y<input ng-model="y"> ={{x+y}}
+
+	<div ng-controller="hello">
+		{{content}} 
+		{{content.age}}
+		{{content.address}}</div>
+	<br>
+	<div ng-controller="hello2">
+		{{content}}
+	</div>
+
+
+
+
+</body>
+</html>
